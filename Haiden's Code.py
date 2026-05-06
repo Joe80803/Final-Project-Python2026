@@ -5,4 +5,10 @@ brainrots = [("Ballerina Cappuccina"), ("Blueberrinni Octopussini"),("Bobrito Ba
              ("Garam Mararam & Madu Dung Dung"), ("Giraffa Celeste"), ("Glorbo Fruttodrillo"), ("Graipussi Medussi"), ("Il Cacto Hipopotamo"),
              ("La Vaca Saturno Saturnita"), ("Lirili Larila"), ("Orangutini Ananasini"), ("Pot Hotspot"), ("Rhino Toasterino"), ("Ta Ta Ta Sahur"),
              ("Tigrrullini Watermellini"),("Tracotucotulu Delapeladustuz"),("Tralalero Tralala"),("Tric Trac Baraboom"),("Trippi Troppi"),
-             ("Trulimero Trulicina"),("Tung Tung Tung Sahur"),("U Din Din Din Din Dun"),("Zibra Zubra Zibralini")]
+             ("Trulimero Trulicina"),("Tung Tung Tung Sahur"),("U Din Din Din Din Dun"),("Zibra Zubra Zibralini"), ("Alessio"), ("Antonio"),
+             ("Armodillo Fartillo"), ("Avocadini Guffo"), ("Bombardino Cignocino Toasterino"), ("Bearorito Applepitolirotito"), ("Bearcketini"),
+             ("Bobrini Zucchini"), ("Bomboclat Crocolat"), ("Bombardiro Squido"), ("Buffalo Cactusuffalo"), ("Carlo"), ("Cameloni Meleloni"),
+             ("Chimpanzini Cappuccini"), ("Cocosino Rhino"), ("Don Pitrolio"), ("Vroosh Boosh"), ("Dragonfruti Axuluti"), ("El Toro Loco"),
+             ("Eaglucci Watermelucci"), ("Foxita Ananasita"), ("Gallo Radice"), ("Fritto Peppino Supremo"), ("Gorgonzilla"), ("Grr Grr Baraboom"),
+             ("Gusino Tractorino"), ("Hamsterino Busitino"), ("Helicopter Fenicopter"), ("Ice Ice Bearlini Polari Orangini"), ("Johnny Applesllice"),
+             ("Justin Beaver"), ("Lionessi Mayonessi"), ("Matteo"), ("Mama Pasta Mista"), ("Quesini Medussi"), ("Squalo Cocodilo"), ("Tracturo Dinosauro")]
