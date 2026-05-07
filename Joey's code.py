@@ -1,10 +1,10 @@
 import tkinter as tk
+
 from PIL import ImageTk, Image
+import tkinter.font as tkFont
 window = tk.Tk()
-import requests
 
 # imports the BeautifulSoup library, that lets us format site info in a readable way.
-from bs4 import BeautifulSoup
 
 # takes the current site address we want to use and stores it as a variable called "URL"
 
@@ -24,6 +24,20 @@ label1.image = photo
 
 label1.place(x=-50,y=-50)
 
-label2 = tk.Label()
+questionNumber = 1
+
+
+
+label2 = tk.Label(
+    window,
+    text=("question" + str(questionNumber)),
+    fg="black",
+    bg="white",
+    width= 20,
+    height= 5,
+    font=tkFont.Font(family="Comic sans", size=19, weight="bold", slant="italic")
+)
+
+label2.place(x=100,y=10)
 
 window.mainloop()
