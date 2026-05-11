@@ -52,4 +52,48 @@ label3 = tk.Label(
 
 label3.place(x=-345,y=200)
 
+A = tk.Button(
+    text="A",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+A.place(x=25, y=300)
+
+B = tk.Button(
+    text="B",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+B.place(x=250, y=300)
+
+C = tk.Button(
+    text="C",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+C.place(x=25, y=390)
+
+D = tk.Button(
+    text="D",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+D.place(x=250, y=390)
+
+
+
+
+
 window.mainloop()
