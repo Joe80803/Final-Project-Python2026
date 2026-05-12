@@ -3,7 +3,7 @@ import tkinter as tk
 from PIL import ImageTk, Image
 import tkinter.font as tkFont
 window = tk.Tk()
-
+# something
 # imports the BeautifulSoup library, that lets us format site info in a readable way.
 
 # takes the current site address we want to use and stores it as a variable called "URL"
