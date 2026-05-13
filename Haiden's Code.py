@@ -1,3 +1,4 @@
+import json
 import random
 brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito", "Bombardiro Crocodilo", "Bombombini Gusini",
              "Boneca Ambalabu", "Brr Brr Patapim", "Brri Brri Bicus Dicus Bombicus", "Burbaloni Lulilolli", "Cappuccino Assassino",
@@ -14,11 +15,7 @@ brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito
              "Justin Beaver", "Lionessi Mayonessi", "Matteo", "Mama Pasta Mista", "Quesini Medussi", "Squalo Cocodilo", "Tracturo Dinosauro"
 ]
 
-def intro():
-    print("Hello and welcome to the Guess the Brainrot quiz.")
-    print("There will be 10 questions and you will be graded so do your best.")
-    input("Good Luck! (type anything to move on) ")
-    playRound(0, 0)
+
 
 def playRound(currentSpot, score):
 
@@ -62,7 +59,7 @@ def yourRight(currentSpot,score):
     print("Your right!")
     currentSpot = currentSpot + 1
     score = score + 1
-    if currentSpot == 10:
+    if currentSpot == 20:
         end(score)
         return currentSpot, score
     else:
@@ -74,7 +71,7 @@ def tryAgain(currentSpot,score):
     print("Try again.")
     print("The Correct answer was "+brainrots[currentSpot]+".")
     currentSpot = currentSpot + 1
-    if currentSpot == 10:
+    if currentSpot == 20:
         end(score)
         return currentSpot,score
     else:
@@ -87,13 +84,113 @@ def review():
 
 
 def end(score):
-    print("You got a "+str(score)+"/10 correct.")
+    print("You got a "+str(score)+"/20 correct.")
     more = input("Would you like to review the ones you missed? (YES/NO) ")
     if more == "YES":
         review()
     else:
         print("Thanks for playing!")
 
-#Something
+import tkinter as tk
 
-intro()
+from PIL import ImageTk, Image
+import tkinter.font as tkFont
+window = tk.Tk()
+
+# imports the BeautifulSoup library, that lets us format site info in a readable way.
+
+# takes the current site address we want to use and stores it as a variable called "URL"
+
+window.title("AMAZING guess the brainrot quiz!")
+
+window.geometry("500x500")
+
+image = Image.open(r"C:\Users\zhyoder44\OneDrive\New folder\download.jfif")
+
+resizedImage = image.resize((600,600))
+
+photo = ImageTk.PhotoImage(resizedImage)
+
+label1 = tk.Label(image=photo)
+
+label1.image = photo
+
+label1.place(x=-50,y=-50)
+
+questionNumber = 1
+
+
+
+label2 = tk.Label(
+    window,
+    text=(str(questionNumber)),
+    fg="black",
+    bg="white",
+    width= 5,
+    height= 3,
+    font=tkFont.Font(family="Comic sans", size=20, weight="bold", slant="italic")
+)
+
+label2.place(x=1, y=2)
+
+label3 = tk.Label(
+    window,
+    text=("Which brainrot is this?"),
+    fg="black",
+    bg="white",
+    width= 100,
+    height= 3,
+    font=tkFont.Font(family="Comic sans", size=15, weight="bold", slant="italic")
+)
+
+label3.place(x=-345,y=200)
+
+A = tk.Button(
+    text="A",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+A.place(x=25, y=300)
+
+B = tk.Button(
+    text="B",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+B.place(x=250, y=300)
+
+C = tk.Button(
+    text="C",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+C.place(x=25, y=390)
+
+D = tk.Button(
+    text="D",
+    width=30,
+    height=5,
+    bg="white",
+    fg="black",
+)
+
+D.place(x=250, y=390)
+
+
+
+
+
+window.mainloop()
+
+class questionNumber:
+    def __init__(self,question):
+        for x in question: question=1
