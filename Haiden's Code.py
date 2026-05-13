@@ -14,11 +14,6 @@ brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito
              "Justin Beaver", "Lionessi Mayonessi", "Matteo", "Mama Pasta Mista", "Quesini Medussi", "Squalo Cocodilo", "Tracturo Dinosauro"
 ]
 
-def intro():
-    print("Hello and welcome to the Guess the Brainrot quiz.")
-    print("There will be 10 questions and you will be graded so do your best.")
-    input("Good Luck! (type anything to move on) ")
-    playRound(0, 0)
 
 def playRound(currentSpot, score):
 
@@ -62,7 +57,7 @@ def yourRight(currentSpot,score):
     print("Your right!")
     currentSpot = currentSpot + 1
     score = score + 1
-    if currentSpot == 10:
+    if currentSpot == 20:
         end(score)
         return currentSpot, score
     else:
@@ -74,7 +69,7 @@ def tryAgain(currentSpot,score):
     print("Try again.")
     print("The Correct answer was "+brainrots[currentSpot]+".")
     currentSpot = currentSpot + 1
-    if currentSpot == 10:
+    if currentSpot == 20:
         end(score)
         return currentSpot,score
     else:
@@ -96,4 +91,3 @@ def end(score):
 
 
 
-intro()
