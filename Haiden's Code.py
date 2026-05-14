@@ -193,4 +193,5 @@ window.mainloop()
 
 class questionNumber:
     def __init__(self,question):
-        for x in question: question=1
+        self.question = question
+
