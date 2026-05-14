@@ -23,82 +23,22 @@ brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito
 ]
 
 
-def playRound(currentSpot, score):
-
-    correct = brainrots[currentSpot]
 
 
+correct = random.sample(brainrots, 1)
+
+
+wrongAnswers = random.sample(brainrots, 1)
+
+
+while correct in wrongAnswers:
     wrongAnswers = random.sample(brainrots, 3)
-
-
-    while correct in wrongAnswers:
-        wrongAnswers = random.sample(brainrots, 3)
 
 
     options = wrongAnswers + [correct]
 
 
     random.shuffle(options)
-
-    print("Which brainrot is this?")
-
-
-
-
-    print("1.", options[0])
-    print("2.", options[1])
-    print("3.", options[2])
-    print("4.", options[3])
-
-    guess = input("Choose a number: ")
-
-
-    selected = options[int(guess) - 1]
-
-    if selected == correct:
-        currentSpot, score = yourRight(currentSpot, score)
-    else:
-        currentSpot, score = tryAgain(currentSpot, score)
-
-
-def yourRight(currentSpot,score):
-    print("Your right!")
-    currentSpot = currentSpot + 1
-    score = score + 1
-    if currentSpot == 20:
-        end(score)
-        return currentSpot, score
-    else:
-        playRound(currentSpot,score)
-        return currentSpot, score
-
-
-def tryAgain(currentSpot,score):
-    print("Try again.")
-    print("The Correct answer was "+brainrots[currentSpot]+".")
-    currentSpot = currentSpot + 1
-    if currentSpot == 20:
-        end(score)
-        return currentSpot,score
-    else:
-        playRound(currentSpot,score)
-        return currentSpot,score
-
-
-def review():
-    print("Lets try the ones you got wrong.")
-
-
-def end(score):
-    print("You got a "+str(score)+"/10 correct.")
-    more = input("Would you like to review the ones you missed? (YES/NO) ")
-    if more == "YES":
-        review()
-    else:
-        print("Thanks for playing!")
-
-
-
 
 window.title("AMAZING guess the brainrot quiz!")
 
@@ -145,7 +85,7 @@ label3 = tk.Label(
 label3.place(x=-345,y=200)
 
 A = tk.Button(
-    text= selected[0][1],
+    text= (str(wrongAnswers[0])),
     width=30,
     height=5,
     bg="white",
@@ -155,7 +95,7 @@ A = tk.Button(
 A.place(x=25, y=300)
 
 B = tk.Button(
-    text="B",
+    text= (str(wrongAnswers[1])),
     width=30,
     height=5,
     bg="white",
@@ -165,7 +105,7 @@ B = tk.Button(
 B.place(x=250, y=300)
 
 C = tk.Button(
-    text="C",
+    text=(str(wrongAnswers[2])),
     width=30,
     height=5,
     bg="white",
@@ -175,7 +115,7 @@ C = tk.Button(
 C.place(x=25, y=390)
 
 D = tk.Button(
-    text="D",
+    text=(str(correct[1])),
     width=30,
     height=5,
     bg="white",
