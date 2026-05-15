@@ -3,10 +3,6 @@ import random
 from PIL import ImageTk, Image
 import tkinter.font as tkFont
 window = tk.Tk()
-# something
-# imports the BeautifulSoup library, that lets us format site info in a readable way.
-
-# takes the current site address we want to use and stores it as a variable called "URL"
 brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito", "Bombardiro Crocodilo", "Bombombini Gusini",
              "Boneca Ambalabu", "Brr Brr Patapim", "Brri Brri Bicus Dicus Bombicus", "Burbaloni Lulilolli", "Cappuccino Assassino",
              "Chef Crabracadabra","Chimpanzini Bananini", "Cocofanto Elefanto", "Frigo Camelo", "Frulli Frulla","Gangster Footera",
@@ -24,21 +20,19 @@ brainrots = ["Ballerina Cappuccina", "Blueberrinni Octopussini","Bobrito Bandito
 
 
 
+selected = random.sample(brainrots, 4)
+
+wrong = random.sample(brainrots, 3)
 
 correct = random.sample(brainrots, 1)
 
-
-wrongAnswers = random.sample(brainrots, 1)
-
-
-while correct in wrongAnswers:
-    wrongAnswers = random.sample(brainrots, 3)
+for x in correct:
+    wrong != correct
 
 
-    options = wrongAnswers + [correct]
 
-
-    random.shuffle(options)
+options = [wrong[0], wrong[1], wrong[2], correct[0]]
+random.shuffle(options)
 
 window.title("AMAZING guess the brainrot quiz!")
 
@@ -59,72 +53,81 @@ label1.place(x=-50,y=-50)
 questionNumber = 1
 
 
+for x in wrong:
+    label2 = tk.Label(
+        window,
+        text=(str(questionNumber)),
+        fg="black",
+        bg="white",
+        width= 5,
+        height= 3,
+        font=tkFont.Font(family="Comic sans", size=20, weight="bold", slant="italic")
+    )
 
-label2 = tk.Label(
-    window,
-    text=(str(questionNumber)),
-    fg="black",
-    bg="white",
-    width= 5,
-    height= 3,
-    font=tkFont.Font(family="Comic sans", size=20, weight="bold", slant="italic")
-)
+    label2.place(x=1, y=2)
 
-label2.place(x=1, y=2)
+    label3 = tk.Label(
+        window,
+        text=("Which brainrot is this?"),
+        fg="black",
+        bg="white",
+        width= 100,
+        height= 3,
+        font=tkFont.Font(family="Comic sans", size=15, weight="bold", slant="italic")
+    )
 
-label3 = tk.Label(
-    window,
-    text=("Which brainrot is this?"),
-    fg="black",
-    bg="white",
-    width= 100,
-    height= 3,
-    font=tkFont.Font(family="Comic sans", size=15, weight="bold", slant="italic")
-)
+    label3.place(x=-345,y=200)
 
-label3.place(x=-345,y=200)
+    A = tk.Button(
+        text= ("A. " + str(options[0])),
+        width=30,
+        height=5,
+        bg="white",
+        fg="black",
+    )
 
-A = tk.Button(
-    text= (str(wrongAnswers[0])),
-    width=30,
-    height=5,
-    bg="white",
-    fg="black",
-)
+    A.place(x=25, y=300)
 
-A.place(x=25, y=300)
+    B = tk.Button(
+        text= ("B. " + str(options[1])),
+        width=30,
+        height=5,
+        bg="white",
+        fg="black",
+    )
 
-B = tk.Button(
-    text= (str(wrongAnswers[1])),
-    width=30,
-    height=5,
-    bg="white",
-    fg="black",
-)
+    B.place(x=250, y=300)
 
-B.place(x=250, y=300)
+    C = tk.Button(
+        text=("C. " + str(options[2])),
+        width=30,
+        height=5,
+        bg="white",
+        fg="black",
+    )
 
-C = tk.Button(
-    text=(str(wrongAnswers[2])),
-    width=30,
-    height=5,
-    bg="white",
-    fg="black",
-)
+    C.place(x=25, y=390)
 
-C.place(x=25, y=390)
+    D = tk.Button(
+        text=("D. " + str(options[3])),
+        width=30,
+        height=5,
+        bg="white",
+        fg="black",
+    )
 
-D = tk.Button(
-    text=(str(correct[1])),
-    width=30,
-    height=5,
-    bg="white",
-    fg="black",
-)
+    D.place(x=250, y=390)
+    correct = x[1]
 
-D.place(x=250, y=390)
-
-
+r = random.randint(0, 3)
+if r == 0:
+    correct = A
+elif r == 1:
+    correct = B
+elif r == 2:
+    correct = C
+else:
+    correct = D
 
 
 
