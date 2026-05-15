@@ -117,7 +117,15 @@ label1.image = photo
 
 label1.place(x=-50,y=-50)
 
-questionNumber = 1
+class questionNumber:
+    def __init__(self,question):
+        self.question = question
+        question = 1
+
+def questionCount:
+    for x in questionNumber:
+        x + 1
+
 
 
 
@@ -151,6 +159,7 @@ A = tk.Button(
     height=5,
     bg="white",
     fg="black",
+    command=questionCount
 )
 
 A.place(x=25, y=300)
@@ -161,6 +170,7 @@ B = tk.Button(
     height=5,
     bg="white",
     fg="black",
+    command=questionCount
 )
 
 B.place(x=250, y=300)
@@ -171,6 +181,7 @@ C = tk.Button(
     height=5,
     bg="white",
     fg="black",
+    command=questionCount
 )
 
 C.place(x=25, y=390)
@@ -181,6 +192,7 @@ D = tk.Button(
     height=5,
     bg="white",
     fg="black",
+    command=questionCount
 )
 
 D.place(x=250, y=390)
@@ -194,4 +206,8 @@ window.mainloop()
 class questionNumber:
     def __init__(self,question):
         self.question = question
+        question = 1
+
+
+
 
